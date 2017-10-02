@@ -1,0 +1,57 @@
+#todo-list {
+    margin: 30px 0;
+    padding: 0 120px;
+}
+
+.todo {
+    @include font-first(20px, $main-dark, 1.2);
+    position: relative;
+    padding: 20px 115px 20px 55px;
+    border-bottom: 1px solid $fifth-light;
+
+    .toggle {
+        position: absolute;
+        top: 20px;
+        left: 16px;
+    }
+
+    .todo-text {
+        display: inline-block;
+        line-height: 1;
+    }
+
+    .edit {
+        @include font-first(16px, $second-dark, 1.4);
+        position: absolute;
+        top: 19px;
+        right: 50px;
+        width: 50px;
+        border: 2px solid $second-dark;
+        text-align: center;
+        text-transform: lowercase;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $third-light;
+            color: $third-light;
+        }
+    }
+
+    .delete {
+        position: absolute;
+        top: 23px;
+        right: 15px;
+
+        &:hover {
+            &::after {
+                background: url('../../img/close-button-hover.png') no-repeat;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1024px) {
+    #todo-list {
+        padding: 0;
+    }
+}

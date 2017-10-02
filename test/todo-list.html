@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="js">
+
+<head>
+    <meta charset="utf-8">
+    <title>To Do</title>
+    <link rel="stylesheet" href="style/css/main.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+    <main>
+        <h1>To Do List</h1>
+
+        <div id="todo-list">
+            <!--<input type="text" name="add" value="" placeholder="What should we do next?" id="enter-todo" class="text-input">
+
+            <ul id="todo-list-items">
+            </ul>-->
+        </div>
+    </main>
+    <script id="todo-template" type="text/html">
+        <input type="checkbox" class="toggle">
+        <span class="todo-text">{{todoName}}</span>
+        <span class="edit">edit</span>
+        <button class="delete"></button>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script type="text/javascript" src="../src/todolist.js"></script>
+    <script type="text/javascript" src="scripts/script.min.js"></script>
+</body>
+
+</html>

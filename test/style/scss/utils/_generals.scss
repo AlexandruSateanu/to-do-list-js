@@ -1,0 +1,28 @@
+body {
+    @include font-first(14px, $main-dark, 1.2);
+    background: $background-light;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+h1 {
+    @include font-first(24px, $second-dark, 1.2);
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media all and (max-width: 1024px) {
+    main {
+        padding: 0 30px;
+    }
+}
+
+@media all and (max-width: 640px) {
+    main {
+        padding: 0 15px;
+    }
+}

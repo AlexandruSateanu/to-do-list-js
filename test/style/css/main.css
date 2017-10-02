@@ -1,0 +1,173 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: top; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  color: #374179;
+  line-height: 1.2;
+  background: #fafaff; }
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto; }
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  color: #ed7200;
+  line-height: 1.2;
+  margin: 20px 0;
+  text-align: center; }
+
+@media all and (max-width: 1024px) {
+  main {
+    padding: 0 30px; } }
+
+@media all and (max-width: 640px) {
+  main {
+    padding: 0 15px; } }
+
+input:focus,
+button:focus {
+  outline: none; }
+
+::-input-placeholder {
+  color: #b2b1a9; }
+
+.text-input {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: #b55700;
+  line-height: 1.2;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b2b1a9;
+  border-radius: 2px; }
+  .text-input.edit-input {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 55px;
+    width: 75%;
+    color: #374179;
+    z-index: 2; }
+
+.toggle {
+  width: 20px;
+  height: 20px;
+  background-color: transparent; }
+
+.delete {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer; }
+  .delete::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../../img/close-button.png") no-repeat;
+    content: ''; }
+
+#todo-list {
+  margin: 30px 0;
+  padding: 0 120px; }
+
+.todo {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: #374179;
+  line-height: 1.2;
+  position: relative;
+  padding: 20px 115px 20px 55px;
+  border-bottom: 1px solid #e8e9eb; }
+  .todo .toggle {
+    position: absolute;
+    top: 20px;
+    left: 16px; }
+  .todo .todo-text {
+    display: inline-block;
+    line-height: 1; }
+  .todo .edit {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    color: #ed7200;
+    line-height: 1.4;
+    position: absolute;
+    top: 19px;
+    right: 50px;
+    width: 50px;
+    border: 2px solid #ed7200;
+    text-align: center;
+    text-transform: lowercase;
+    cursor: pointer; }
+    .todo .edit:hover {
+      border-color: #b55700;
+      color: #b55700; }
+  .todo .delete {
+    position: absolute;
+    top: 23px;
+    right: 15px; }
+    .todo .delete:hover::after {
+      background: url("../../img/close-button-hover.png") no-repeat; }
+
+@media all and (max-width: 1024px) {
+  #todo-list {
+    padding: 0; } }

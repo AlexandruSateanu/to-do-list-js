@@ -1,0 +1,52 @@
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+    @if $vendors {
+        @each $vendor in $vendors {
+            #{'-' + $vendor + '-' + $property}: #{$value};
+        }
+    }
+    #{$property}: #{$value};
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+        @if $i < $max {
+            $animations: #{$animations + ', '};
+        }
+    }
+    animation: $animations;
+}
+
+@mixin keyframes($animation-name) {
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color) {
+    box-shadow: $top $left $blur $spread $color;
+}
+
+@mixin clearfix {
+    display: block;
+    height: 0;
+    clear: both;
+    content: '';
+    overflow: hidden;
+    visibility: hidden;
+}
+
+@mixin vertical-align($position: relative) {
+    @include prefix(transform, translateY(-50%), webkit ms moz o);
+    position: $position;
+    top: 50%;
+}
+
+@mixin font-first($size: false, $colour: false,  $lh: false) {
+    font-family: $font-first;
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $lh { line-height: $lh; }
+}

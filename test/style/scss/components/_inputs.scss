@@ -1,0 +1,55 @@
+input,
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+::-input-placeholder {
+    color: $fourth-light;
+}
+
+.text-input {
+    @include font-first(20px, $third-light, 1.2);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $fourth-light;
+    border-radius: 2px;
+
+    &.edit-input {
+        position: absolute;
+        top: 15px;
+        bottom: 15px;
+        left: 55px;
+        width: 75%;
+        color: $main-dark;
+        z-index: 2;
+    }
+}
+
+.toggle {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+}
+
+.delete {
+    @include prefix(appearance, none, moz webkit);
+    position: relative;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url('../../img/close-button.png') no-repeat;
+        content: '';
+    }
+}
