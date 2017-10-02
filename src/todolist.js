@@ -332,6 +332,7 @@ function TodoModule() {
     function defineToDoList() {
         var ToDoList = {};
         
+        var list = [];
 
         return ToDoList;
     }
