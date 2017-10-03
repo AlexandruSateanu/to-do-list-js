@@ -27,7 +27,7 @@ function TodoModule() {
             addTodo: addTodo,
             deleteTodo: deleteTodo,
             editTodo: editTodo
-        }
+        };
     }
 
     /* initialize a model */
@@ -40,7 +40,7 @@ function TodoModule() {
 
         /* Location for appending todos */
         location: function() {
-            return document.getElementById("todo-list-items")
+            return document.getElementById("todo-list-items");
         },
 
         /* add the  UI elements when loading the module. Adds input field and list container */
@@ -121,7 +121,7 @@ function TodoModule() {
                 /* we need the todoName from the last added todo to the list 
                 -> the index is equal to lenght - 1 */
                 todoName: todoList[todoList.length - 1].todoName
-            }
+            };
 
             var newTodo = document.createElement("li");
             newTodo.classList.add("todo");
@@ -322,10 +322,10 @@ function TodoModule() {
 
     return {
         init: init
-    }
+    };
 }
 
-
+/*
 (function (window){
     'use strict';
 
@@ -344,4 +344,4 @@ function TodoModule() {
         console.log("ToDoList is already defined.");
     }
 })(window);
-
+*/

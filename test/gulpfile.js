@@ -21,7 +21,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('scripts-lint', function() {
-	gulp.src(['scripts/*.js', '**/*-min.js'])
+	gulp.src(['scripts/*.js', '!**/*min.js'])
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'));
 });
